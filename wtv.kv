@@ -1,0 +1,39 @@
+<Button>:
+    font_size: 40
+    color: 0,1,0,1
+    size_hint: 0.3, 0.2 
+
+<FloatLayout>:
+    Label:
+        text: "What The Vet App"
+        font_size: root.size[0]*.03
+        text_size: self.size
+        color: 0,1,0,1
+        size_hint: 1, 1
+        pos: (root.width * .35, root.height * .92)
+
+    Label:
+        id: status
+        text: "Status: "
+        font_size: root.size[0]*.03
+        text_size: self.size
+        color: 0,1,0,1
+        size_hint: 1, 1
+        pos: (root.width * .15, root.height * .78)
+        
+    TextInput:
+        id: wtvtext
+        focus: True
+        pos_hint: {"right": 0.85, 'top':0.75}
+        size_hint: 0.7, 0.2
+        
+    Button:
+        text: "Undo It"
+        pos_hint: {"x": 0.52, 'y':0.3}
+        on_release: app.pasteit(wtvtext, status)
+	
+    Button:
+        text: "Do It"
+        pos_hint: {"right": 0.5, 'top':0.5}
+        on_release: app.clipit(wtvtext, status)
+
