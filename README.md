@@ -1,4 +1,4 @@
-Dependencies: python 2.7, kivy, pyperclip
+Dependencies: python 2.7, kivy
 
 Files: wtv.py, wtv.kv
 

@@ -4,10 +4,9 @@
      
 import kivy
 
-import pyperclip
-
 from kivy.app import App
 from kivy.uix.floatlayout import FloatLayout
+from kivy.core.clipboard import Clipboard
 
 
 phonetic={'a':'alpha','b':'beta','c':'charlie','d':'delta','e':'echo','f':'foxtrot',
@@ -46,12 +45,12 @@ class wtv(App):
             except KeyError:
                 pass
         
-        pyperclip.copy(addy)
+        Clipboard.copy(addy)
         status.text = msg
         text.text = addy
         
     def pasteit(self, text, status):
-	    #text.text = pyperclip.paste()
+	    
         address = str(text.text)
         addy = ''
         msg = "Status: Your output has been send to the clipboard: \n\n"
@@ -61,7 +60,7 @@ class wtv(App):
             except KeyError:
                 pass
         
-        pyperclip.copy(addy)
+        Clipboard.copy(addy)
         status.text = msg
         text.text = addy
 		
