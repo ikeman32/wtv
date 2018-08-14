@@ -1,3 +1,7 @@
+ #-*-coding:utf8;-*-
+     #qpy:2
+     #qpy:kivy
+     
 import kivy
 
 import pyperclip
